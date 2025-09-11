@@ -7,14 +7,12 @@ import { Suspense } from "react"
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-montserrat",
   weight: ["400", "600", "900"],
 })
 
 const openSans = Open_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-open-sans",
   weight: ["400", "600"],
 })
 
