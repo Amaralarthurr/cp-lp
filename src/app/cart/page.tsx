@@ -85,7 +85,7 @@ export default function CartPage() {
         type: "experiência",
         price: 89.9,
         quantity: 1,
-        image: "/digital-rain-art-cyberpunk-emotional.jpg",
+        image: "digital-rain-art-cyberpunk-emotional.jpg",
         creator: "Ana Silva",
       },
     ]
@@ -114,7 +114,7 @@ export default function CartPage() {
       type: "assinatura",
       price: plan.price,
       quantity: 1,
-      image: "/placeholder.svg?key=subscription",
+      image: "placeholder.svg?key=subscription",
       creator: "Human.exe",
     }
 

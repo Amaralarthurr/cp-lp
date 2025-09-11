@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${montserrat.variable} ${openSans.variable} antialiased`}>
+    <html lang="pt-BR" className="antialiased">
       <body className="font-body">
         <Suspense fallback={null}>{children}</Suspense>
       </body>
