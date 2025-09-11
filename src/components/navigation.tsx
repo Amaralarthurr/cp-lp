@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 interface NavigationProps {
   activeSection: string
 }
@@ -15,20 +17,20 @@ export default function Navigation({ activeSection }: NavigationProps) {
           </div>
           <ul className="hidden md:flex space-x-8">
             {[
-              { href: "#home", label: "> Início" },
-              { href: "#why-humans", label: "> Humanos" },
-              { href: "#coexistence", label: "> Coexistência" },
-              { href: "#quiz", label: "> Quiz" },
-              { href: "#contact", label: "> Contato" },
+              { href: "/", label: "> Início" },
+              { href: "/experience/1", label: "> Experiência" },
+              { href: "/cart", label: "> Carrinho" },
+              { href: "/#quiz", label: "> Quiz" },
+              { href: "/#contact", label: "> Contato" },
             ].map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   className="nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group neon-text"
                 >
                   {item.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber-green transition-all duration-300 group-hover:w-full shadow-sm shadow-cyber-green"></span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
