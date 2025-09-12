@@ -40,14 +40,14 @@ const mockExperience: ExperienceData = {
   creator: {
     name: "Ana Silva",
     bio: "Artista digital que explora a intersecção entre memória humana e tecnologia. Formada em Belas Artes, dedica sua obra à preservação da experiência emocional humana.",
-    avatar: "/female-artist-portrait.png",
+    avatar: "/user-woman.png",
     humanTouch:
       "Cada pincelada digital carrega as lágrimas reais que derramei durante a pandemia. A IA pode simular chuva, mas não pode sentir a saudade que cada gota representa.",
   },
   description:
     "Uma obra interativa que combina arte digital com memórias pessoais, explorando como a tecnologia pode preservar e amplificar a experiência emocional humana.",
   content: {
-    image: "/digital-rain-art-cyberpunk-emotional.jpg",
+    image: "/neon-city.jpg",
   },
   humanElement:
     "Esta obra nasceu de noites insones durante o isolamento, onde cada pixel foi posicionado com a precisão de quem busca eternizar um sentimento. A IA ajudou na renderização, mas a alma por trás de cada elemento é puramente humana - carregada de nostalgia, esperança e a vulnerabilidade que só nós, humanos, conseguimos transformar em arte.",

@@ -32,9 +32,7 @@ export default function CreatorInfo({ creator }: CreatorInfoProps) {
       <p className="text-gray-300 text-sm mb-4 font-mono">{creator.bio}</p>
       <div className="border-t border-cyber-cyan/30 pt-4">
         <h5 className="text-cyber-pink font-mono font-bold text-sm mb-2">[TOQUE_HUMANO]</h5>
-        <p className="text-gray-300 text-sm font-mono italic">
-          {creator.humanTouch ? `"${creator.humanTouch}"` : ""}
-        </p>
+        <p className="text-gray-300 text-sm font-mono italic">{creator.humanTouch ? `"${creator.humanTouch}"` : ""}</p>
       </div>
     </div>
   )

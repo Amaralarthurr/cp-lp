@@ -20,47 +20,32 @@ interface SubscriptionPlansProps {
 export default function SubscriptionPlans({ plans, selectedPlan, onSelectPlan }: SubscriptionPlansProps) {
   return (
     <div className="bg-cyber-gray/80 border border-cyber-purple/50 rounded-lg p-6 hologram-effect backdrop-blur-sm">
-      <h3 className="text-2xl font-bold text-cyber-purple mb-6 font-mono neon-text">[PLANOS_PREMIUM]</h3>
+      <h2 className="text-xl font-bold text-cyber-purple mb-4 font-mono neon-text">[PLANOS_DE_ASSINATURA]</h2>
       <div className="grid md:grid-cols-3 gap-4">
         {plans.map((plan) => (
           <div
             key={plan.id}
-            className={`relative border rounded-lg p-4 transition-all duration-300 ${
-              plan.popular
-                ? "border-cyber-pink bg-cyber-pink/10"
-                : selectedPlan === plan.id
-                  ? "border-cyber-green bg-cyber-green/10"
-                  : "border-cyber-gray bg-cyber-gray/20 hover:border-cyber-cyan"
-            }`}
+            className={`p-4 rounded-lg border transition-all duration-300 cursor-pointer ${
+              selectedPlan === plan.id
+                ? "border-cyber-purple bg-cyber-purple/20"
+                : "border-cyber-purple/30 hover:border-cyber-purple/50"
+            } ${plan.popular ? "ring-2 ring-cyber-pink/50" : ""}`}
+            onClick={() => onSelectPlan(plan.id)}
           >
-            {plan.popular && (
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-cyber-pink text-white px-3 py-1 rounded-full font-mono text-xs">MAIS POPULAR</span>
-              </div>
-            )}
+            {plan.popular && <div className="text-cyber-pink text-xs font-mono mb-2 text-center">MAIS POPULAR</div>}
+            <h3 className="font-bold text-white font-mono text-center mb-2">{plan.name}</h3>
             <div className="text-center mb-4">
-              <h4 className="text-lg font-bold text-white font-mono mb-2">{plan.name}</h4>
-              <div className="text-3xl font-bold text-cyber-green font-mono">R$ {plan.price.toFixed(2)}</div>
-              <div className="text-gray-400 font-mono text-sm">/{plan.period}</div>
+              <div className="text-2xl font-bold text-cyber-purple font-mono">R$ {plan.price}</div>
+              <div className="text-gray-400 text-xs font-mono">/{plan.period}</div>
             </div>
-            <ul className="space-y-2 mb-6">
+            <ul className="space-y-2">
               {plan.features.map((feature, index) => (
-                <li key={index} className="flex items-start space-x-2">
+                <li key={index} className="flex items-start space-x-2 text-sm">
                   <Check className="w-4 h-4 text-cyber-green mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-300 font-mono text-sm">{feature}</span>
+                  <span className="text-gray-300 font-mono">{feature}</span>
                 </li>
               ))}
             </ul>
-            <button
-              onClick={() => onSelectPlan(plan.id)}
-              className={`w-full py-2 px-4 rounded-lg font-mono text-sm transition-all duration-300 ${
-                selectedPlan === plan.id
-                  ? "bg-cyber-green text-cyber-dark"
-                  : "bg-cyber-gray border border-cyber-cyan/30 text-cyber-cyan hover:border-cyber-cyan"
-              }`}
-            >
-              {selectedPlan === plan.id ? "✓ SELECIONADO" : ">>> SELECIONAR"}
-            </button>
           </div>
         ))}
       </div>
