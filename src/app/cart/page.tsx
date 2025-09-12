@@ -101,7 +101,7 @@ export default function CartPage() {
         type: "experiência",
         price: 89.9,
         quantity: 1,
-        image: "/service-img.jpg",
+        image: "/neon-city.jpg",
         creator: "Ana Silva",
       },
     ]
@@ -130,7 +130,7 @@ export default function CartPage() {
       type: "assinatura",
       price: plan.price,
       quantity: 1,
-      image: "/placeholder-8mipj.png",
+      image: "/service-img.jpg",
       creator: "Human.exe",
     }
 
