@@ -1,12 +1,15 @@
 "use client"
 
 import type React from "react"
-
 import Link from "next/link"
-import { useRouter } from "next/navigation" // Added useRouter for programmatic navigation
+import { useRouter } from "next/navigation"
 
-export default function Navigation() {
-  const router = useRouter() // Added router instance
+interface NavigationProps {
+  activeSection: string
+}
+
+export default function Navigation({ activeSection }: NavigationProps) {
+  const router = useRouter()
 
   const handleNavClick = (href: string, e: React.MouseEvent) => {
     console.log("[v0] Navigation click:", href)
@@ -31,7 +34,9 @@ export default function Navigation() {
                 <Link
                   href={item.href}
                   onClick={(e) => handleNavClick(item.href, e)}
-                  className="nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group neon-text cursor-pointer pointer-events-auto"
+                  className={`nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group neon-text cursor-pointer pointer-events-auto ${
+                    activeSection === item.href.replace("/", "") ? "text-cyber-green" : ""
+                  }`}
                 >
                   {item.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber-green transition-all duration-300 group-hover:w-full shadow-sm shadow-cyber-green"></span>
