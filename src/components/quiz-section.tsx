@@ -1,8 +1,6 @@
 import QuizSystem from "@/components/quiz-system"
 import { useCallback, useRef, useState } from "react"
 import dynamic from "next/dynamic"
-
-// Carrega o componente 3D apenas no cliente
 const Quiz3DScene = dynamic(() => import("@/components/quiz-3d-scene"), { ssr: false })
 
 export default function QuizSection() {
@@ -17,7 +15,6 @@ export default function QuizSection() {
         hideTimeoutRef.current = null
       }
 
-      // Mensagens curtas
       const positive = ["Muito bem!", "Correto!", "Boa!", "Show!", "Nice!"]
       const supportive = ["Quase!", "Tente de novo", "Você consegue!", "Sem problema", "Segue o jogo!"]
       const msg = (isCorrect ? positive : supportive)[Math.floor(Math.random() * 5)]
@@ -38,7 +35,6 @@ export default function QuizSection() {
         <h2 className="text-4xl md:text-5xl font-cyber font-black text-center mb-8 text-cyber-pink neon-text">
           QUIZ: COEXISTÊNCIA IA-HUMANO
         </h2>
-        {/* Cena 3D do robô: overlay fixo no canto inferior direito */}
         <div className="mb-12 relative">
           <div
             className="fixed bottom-4 right-4 w-[360px] max-w-[85vw] z-50 drop-shadow-[0_0_20px_rgba(255,0,128,0.3)]"
