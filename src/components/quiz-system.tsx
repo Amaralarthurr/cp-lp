@@ -148,7 +148,16 @@ const quizQuestions: QuizQuestion[] = [
   },
 ]
 
-export default function QuizSystem() {
+interface QuizSystemProps {
+  onAnswered?: (payload: {
+    isCorrect: boolean
+    points: number
+    explanation: string
+    questionIndex: number
+  }) => void
+}
+
+export default function QuizSystem({ onAnswered }: QuizSystemProps) {
   const [quizState, setQuizState] = useState<QuizState>({
     currentQuestion: 0,
     score: 0,
@@ -342,11 +351,18 @@ export default function QuizSystem() {
         }
       }
 
-      setQuestionResult({
+      const result = {
         isCorrect,
         points,
         explanation: question.explanation,
-      })
+      }
+
+      // Emite evento para integração com a cena 3D
+      try {
+        onAnswered?.({ ...result, questionIndex: quizState.currentQuestion })
+      } catch {}
+
+      setQuestionResult(result)
 
       setTimeout(() => {
         setCurrentScreen("result")
