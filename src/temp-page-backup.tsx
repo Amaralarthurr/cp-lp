@@ -1,11 +1,10 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import QuizSystem from "@/components/quiz-system"
 import ContactForm from "@/components/contact-form"
 
 export default function HumanExePage() {
-  const [activeSection, setActiveSection] = useState("")
   // Estado para partículas
   const [particles, setParticles] = useState<
     { left: string; animationDuration: string; animationDelay: string; background: string; boxShadow: string }[]
@@ -55,7 +54,6 @@ export default function HumanExePage() {
       })
     })
 
-    // Estado ativo da navegação baseado no scroll
     const handleScroll = () => {
       const sections = document.querySelectorAll("section[id]")
       const navLinks = document.querySelectorAll(".nav-link")
@@ -74,7 +72,6 @@ export default function HumanExePage() {
           link.classList.add("active")
         }
       })
-      setActiveSection(current)
     }
 
     window.addEventListener("scroll", handleScroll)

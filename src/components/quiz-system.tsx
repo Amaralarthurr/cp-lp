@@ -289,23 +289,6 @@ export default function QuizSystem({ onAnswered }: QuizSystemProps) {
     showNotification("🚀 QUIZ INICIADO! Boa sorte!", "success")
   }, [showNotification])
 
-  const startQuestionTimer = useCallback(() => {
-    setQuizState((prev) => ({ ...prev, timeLeft: 15 }))
-
-    const timer = setInterval(() => {
-      setQuizState((prev) => {
-        if (prev.timeLeft <= 1) {
-          clearInterval(timer)
-          setTimeout(() => selectAnswer(-1), 100)
-          return { ...prev, timeLeft: 0, timer: null }
-        }
-        return { ...prev, timeLeft: prev.timeLeft - 1 }
-      })
-    }, 1000)
-
-    setQuizState((prev) => ({ ...prev, timer }))
-  }, [])
-
   const selectAnswer = useCallback(
     (answerIndex: number) => {
       setQuizState((prev) => {
@@ -357,7 +340,6 @@ export default function QuizSystem({ onAnswered }: QuizSystemProps) {
         explanation: question.explanation,
       }
 
-      // Emite evento para integração com a cena 3D
       try {
         onAnswered?.({ ...result, questionIndex: quizState.currentQuestion })
       } catch {}
@@ -368,8 +350,25 @@ export default function QuizSystem({ onAnswered }: QuizSystemProps) {
         setCurrentScreen("result")
       }, 1500)
     },
-    [quizState.currentQuestion, quizState.timeLeft, showNotification],
+    [quizState.currentQuestion, quizState.timeLeft, showNotification, onAnswered],
   )
+
+  const startQuestionTimer = useCallback(() => {
+    setQuizState((prev) => ({ ...prev, timeLeft: 15 }))
+
+    const timer = setInterval(() => {
+      setQuizState((prev) => {
+        if (prev.timeLeft <= 1) {
+          clearInterval(timer)
+          setTimeout(() => selectAnswer(-1), 100)
+          return { ...prev, timeLeft: 0, timer: null }
+        }
+        return { ...prev, timeLeft: prev.timeLeft - 1 }
+      })
+    }, 1000)
+
+    setQuizState((prev) => ({ ...prev, timer }))
+  }, [selectAnswer])
 
   const nextQuestion = useCallback(() => {
     if (quizState.currentQuestion + 1 >= quizQuestions.length) {
