@@ -51,10 +51,14 @@ function Robot({ currentMessage, isAnimating }: RobotProps) {
 }
 
 interface Quiz3DSceneProps {
-  quizState: any
+  quizState: QuizState
   currentMessage: string
   visible?: boolean
   onClose?: () => void
+}
+
+interface QuizState {
+  isPlaying?: boolean
 }
 
 export default function Quiz3DScene({ quizState, currentMessage, visible = false, onClose }: Quiz3DSceneProps) {
