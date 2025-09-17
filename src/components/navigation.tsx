@@ -5,11 +5,7 @@ import type React from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation" // Added useRouter for programmatic navigation
 
-interface NavigationProps {
-  activeSection: string
-}
-
-export default function Navigation({ activeSection }: NavigationProps) {
+export default function Navigation() {
   const router = useRouter() // Added router instance
 
   const handleNavClick = (href: string, e: React.MouseEvent) => {

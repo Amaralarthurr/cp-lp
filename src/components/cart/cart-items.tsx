@@ -1,6 +1,7 @@
 "use client"
 
 import { Minus, Plus, X } from "lucide-react"
+import Image from "next/image"
 
 interface CartItem {
   id: string
@@ -36,11 +37,16 @@ export default function CartItems({ items, onUpdateQuantity, onRemoveItem }: Car
             key={item.id}
             className="flex items-center space-x-4 p-4 bg-cyber-darker/50 rounded-lg border border-cyber-green/30"
           >
-            <img
-              src={item.image || "/placeholder.svg"}
-              alt={item.title}
-              className="w-16 h-16 rounded-lg object-cover border border-cyber-green/50"
-            />
+            <div className="relative w-16 h-16">
+              <Image
+                src={item.image || "/placeholder.svg"}
+                alt={item.title}
+                fill
+                sizes="64px"
+                className="rounded-lg object-cover border border-cyber-green/50"
+                priority={false}
+              />
+            </div>
             <div className="flex-1">
               <h3 className="font-bold text-white font-mono">{item.title}</h3>
               <p className="text-cyber-cyan text-sm font-mono">{item.creator}</p>

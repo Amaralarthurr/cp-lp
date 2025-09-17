@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import QuizSystem from "@/components/quiz-system"
 import ContactForm from "@/components/contact-form"
 

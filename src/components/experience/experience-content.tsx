@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Play, Pause, Clock } from "lucide-react"
 
 interface ExperienceContentProps {
@@ -17,7 +18,16 @@ export default function ExperienceContent({ title, image, duration, humanElement
     <div className="lg:col-span-2">
       <div className="bg-cyber-gray/80 border border-cyber-green/50 rounded-lg overflow-hidden hologram-effect backdrop-blur-sm mb-8">
         <div className="relative">
-          <img src={image || "/placeholder.svg"} alt={title} className="w-full h-96 object-cover" />
+          <div className="relative w-full h-96">
+            <Image
+              src={image || "/placeholder.svg"}
+              alt={title}
+              fill
+              sizes="100vw"
+              className="object-cover"
+              priority={false}
+            />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-t from-cyber-dark/80 via-transparent to-transparent"></div>
           <div className="absolute bottom-4 left-4 right-4">
             <div className="flex items-center justify-between">

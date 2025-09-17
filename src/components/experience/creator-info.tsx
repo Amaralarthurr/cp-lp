@@ -1,4 +1,5 @@
 import { User } from "lucide-react"
+import Image from "next/image"
 
 interface Creator {
   name: string
@@ -16,11 +17,16 @@ export default function CreatorInfo({ creator }: CreatorInfoProps) {
     <div className="bg-cyber-gray/80 border border-cyber-cyan/50 rounded-lg p-6 hologram-effect backdrop-blur-sm">
       <h3 className="text-xl font-bold text-cyber-cyan mb-4 font-mono neon-text">[CRIADOR]</h3>
       <div className="flex items-start space-x-4 mb-4">
-        <img
-          src={creator.avatar || "/placeholder.svg"}
-          alt={creator.name}
-          className="w-16 h-16 rounded-full border-2 border-cyber-cyan"
-        />
+        <div className="relative w-16 h-16">
+          <Image
+            src={creator.avatar || "/placeholder.svg"}
+            alt={creator.name}
+            fill
+            sizes="64px"
+            className="rounded-full border-2 border-cyber-cyan object-cover"
+            priority={false}
+          />
+        </div>
         <div>
           <h4 className="text-white font-bold font-mono">{creator.name}</h4>
           <div className="flex items-center space-x-1 mt-1">

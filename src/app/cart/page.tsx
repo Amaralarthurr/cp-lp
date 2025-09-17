@@ -145,7 +145,7 @@ export default function CartPage() {
     setStep("checkout")
   }
 
-  const handleCheckoutSubmit = async (data: CheckoutFormData) => {
+  const handleCheckoutSubmit = async (_data: CheckoutFormData) => {
     setIsProcessing(true)
 
     // Simulate payment processing
@@ -175,7 +175,7 @@ export default function CartPage() {
               {">>> ACESSAR_MINHAS_EXPERIÊNCIAS"}
             </Link>
             <Link href="/" className="block text-cyber-cyan hover:text-cyber-green transition-colors font-mono">
-              {"< Voltar ao início"}
+              {"Voltar ao início"}
             </Link>
           </div>
         </div>
