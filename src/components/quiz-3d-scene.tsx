@@ -50,17 +50,6 @@ function Robot({ currentMessage, isAnimating }: RobotProps) {
   )
 }
 
-function QuizInterface({ onQuizStateChange }: { onQuizStateChange: (state: any) => void }) {
-  return (
-    <Html position={[2, 0, 0]} transform occlude>
-      <div className="w-96 h-96 bg-cyber-gray/80 border border-cyber-pink/50 rounded-lg p-4 backdrop-blur-sm">
-        <div id="quiz-container" className="h-full overflow-y-auto">
-        </div>
-      </div>
-    </Html>
-  )
-}
-
 interface Quiz3DSceneProps {
   quizState: any
   currentMessage: string

@@ -350,7 +350,7 @@ export default function QuizSystem({ onAnswered }: QuizSystemProps) {
         setCurrentScreen("result")
       }, 1500)
     },
-    [quizState.currentQuestion, quizState.timeLeft, showNotification, onAnswered],
+    [quizState.currentQuestion, showNotification, onAnswered],
   )
 
   const startQuestionTimer = useCallback(() => {
