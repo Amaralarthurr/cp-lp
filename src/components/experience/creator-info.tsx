@@ -15,7 +15,7 @@ interface CreatorInfoProps {
 export default function CreatorInfo({ creator }: CreatorInfoProps) {
   return (
     <div className="bg-cyber-gray/80 border border-cyber-cyan/50 rounded-lg p-6 hologram-effect backdrop-blur-sm">
-      <h3 className="text-xl font-bold text-cyber-cyan mb-4 font-mono neon-text">[CRIADOR]</h3>
+      <h3 className="text-xl font-bold text-cyber-cyan mb-4 font-mono ">[CRIADOR]</h3>
       <div className="flex items-start space-x-4 mb-4">
         <div className="relative w-16 h-16">
           <Image

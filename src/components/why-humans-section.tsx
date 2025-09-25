@@ -44,7 +44,7 @@ export default function WhyHumansSection() {
     <section id="why-humans" className="py-20 px-4 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyber-green/5 to-transparent"></div>
       <div className="max-w-7xl mx-auto relative z-10">
-        <h2 className="text-4xl md:text-5xl font-cyber font-black text-center mb-8 text-cyber-green neon-text">
+        <h2 className="text-4xl md:text-5xl font-cyber font-black text-center mb-8 text-cyber-green">
           POR QUE HUMANOS AINDA IMPORTAM?
         </h2>
         <p className="text-center text-gray-300 text-lg mb-16 max-w-3xl mx-auto font-mono">
@@ -55,13 +55,11 @@ export default function WhyHumansSection() {
           {humanQualities.map((item, index) => (
             <div
               key={index}
-              className={`bg-cyber-gray/80 border border-${item.color}/50 rounded-lg p-6 hover:border-${item.color} transition-all duration-300 hover:shadow-2xl hover:shadow-${item.color}/30 hologram-effect backdrop-blur-sm`}
+              className={`bg-cyber-gray/80 border border-${item.color}/50 rounded-lg p-6 hover:border-${item.color} transition-all duration-300 hologram-effect backdrop-blur-sm`}
             >
               <div className="flex justify-between items-center mb-4">
-                <h3 className={`text-xl font-bold text-${item.color} neon-text font-mono`}>{item.title}</h3>
-                <span
-                  className={`w-3 h-3 bg-${item.color} rounded-full animate-pulse shadow-lg shadow-${item.color}/50`}
-                ></span>
+                <h3 className={`text-xl font-bold text-${item.color} font-mono`}>{item.title}</h3>
+                <span className={`w-3 h-3 bg-${item.color} rounded-full animate-pulse`}></span>
               </div>
               <p className="text-gray-300 font-mono text-sm leading-relaxed">
                 <span className="text-cyber-green">{">"}</span> {item.content}

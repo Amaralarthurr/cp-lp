@@ -93,14 +93,14 @@ export default function HumanExePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <span className="text-2xl font-cyber font-black text-cyber-green neon-text">Human.exe</span>
+              <span className="text-2xl font-cyber font-black text-cyber-green ">Human.exe</span>
               <span className="text-cyber-green animate-pulse text-xl">_</span>
             </div>
             <ul className="hidden md:flex space-x-8">
               <li>
                 <a
                   href="#home"
-                  className="nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group neon-text"
+                  className="nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group "
                 >
                   {"> Início"}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber-green transition-all duration-300 group-hover:w-full shadow-sm shadow-cyber-green"></span>
@@ -109,7 +109,7 @@ export default function HumanExePage() {
               <li>
                 <a
                   href="#why-humans"
-                  className="nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group neon-text"
+                  className="nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group "
                 >
                   {"> Humanos"}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber-green transition-all duration-300 group-hover:w-full shadow-sm shadow-cyber-green"></span>
@@ -118,7 +118,7 @@ export default function HumanExePage() {
               <li>
                 <a
                   href="#coexistence"
-                  className="nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group neon-text"
+                  className="nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group "
                 >
                   {"> Coexistência"}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber-green transition-all duration-300 group-hover:w-full shadow-sm shadow-cyber-green"></span>
@@ -127,7 +127,7 @@ export default function HumanExePage() {
               <li>
                 <a
                   href="#quiz"
-                  className="nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group neon-text"
+                  className="nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group "
                 >
                   {"> Quiz"}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber-green transition-all duration-300 group-hover:w-full shadow-sm shadow-cyber-green"></span>
@@ -136,7 +136,7 @@ export default function HumanExePage() {
               <li>
                 <a
                   href="#contact"
-                  className="nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group neon-text"
+                  className="nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group "
                 >
                   {"> Contato"}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyber-green transition-all duration-300 group-hover:w-full shadow-sm shadow-cyber-green"></span>
@@ -164,7 +164,7 @@ export default function HumanExePage() {
             </div>
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-cyber font-black mb-8 relative">
               <span
-                className="glitch text-white neon-text"
+                className="glitch text-white "
                 data-text="HUMAN.EXE"
                 style={{ textShadow: "0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41" }}
               >
@@ -182,7 +182,7 @@ export default function HumanExePage() {
                   section.scrollIntoView({ behavior: "smooth", block: "start" })
                 }
               }}
-              className="relative bg-gradient-to-r from-cyber-green to-cyber-cyan hover:from-cyber-pink hover:to-cyber-purple font-bold py-4 px-8 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyber-green/50 border border-cyber-green hover:border-cyber-pink neon-text"
+              className="relative bg-gradient-to-r from-cyber-green to-cyber-cyan hover:from-cyber-pink hover:to-cyber-purple font-bold py-4 px-8 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyber-green/50 border border-cyber-green hover:border-cyber-pink "
             >
               <span className="relative z-10">{">>> INICIALIZAR_PROTOCOLO"}</span>
             </button>
@@ -193,7 +193,7 @@ export default function HumanExePage() {
         <section id="why-humans" className="py-20 px-4 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyber-green/5 to-transparent"></div>
           <div className="max-w-7xl mx-auto relative z-10">
-            <h2 className="text-4xl md:text-5xl font-cyber font-black text-center mb-8 text-cyber-green neon-text">
+            <h2 className="text-4xl md:text-5xl font-cyber font-black text-center mb-8 text-cyber-green ">
               POR QUE HUMANOS AINDA IMPORTAM?
             </h2>
             <p className="text-center text-gray-300 text-lg mb-16 max-w-3xl mx-auto font-mono">
@@ -244,7 +244,7 @@ export default function HumanExePage() {
                   className={`bg-cyber-gray/80 border border-${item.color}/50 rounded-lg p-6 hover:border-${item.color} transition-all duration-300 hover:shadow-2xl hover:shadow-${item.color}/30 hologram-effect backdrop-blur-sm`}
                 >
                   <div className="flex justify-between items-center mb-4">
-                    <h3 className={`text-xl font-bold text-${item.color} neon-text font-mono`}>{item.title}</h3>
+                    <h3 className={`text-xl font-bold text-${item.color}  font-mono`}>{item.title}</h3>
                     <span
                       className={`w-3 h-3 bg-${item.color} rounded-full animate-pulse shadow-lg shadow-${item.color}/50`}
                     ></span>
@@ -262,7 +262,7 @@ export default function HumanExePage() {
         <section id="quiz" className="py-20 px-4 bg-cyber-darker relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-cyber-pink/10 via-transparent to-cyber-green/10"></div>
           <div className="max-w-7xl mx-auto relative z-10">
-            <h2 className="text-4xl md:text-5xl font-cyber font-black text-center mb-8 text-cyber-pink neon-text">
+            <h2 className="text-4xl md:text-5xl font-cyber font-black text-center mb-8 text-cyber-pink ">
               QUIZ: COEXISTÊNCIA IA-HUMANO
             </h2>
             <p className="text-center text-gray-300 text-lg mb-12 max-w-3xl mx-auto font-mono">
@@ -348,14 +348,14 @@ export default function HumanExePage() {
         <section id="contact" className="py-20 px-4 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyber-cyan/5 to-transparent"></div>
           <div className="max-w-7xl mx-auto relative z-10">
-            <h2 className="text-4xl md:text-5xl font-cyber font-black text-center mb-16 text-cyber-cyan neon-text">
+            <h2 className="text-4xl md:text-5xl font-cyber font-black text-center mb-16 text-cyber-cyan ">
               JUNTE-SE A RESISTÊNCIA
             </h2>
             <div className="grid lg:grid-cols-2 gap-12">
               <ContactForm />
 
               <div className="bg-cyber-gray/80 border border-cyber-cyan/50 rounded-lg p-6 hologram-effect backdrop-blur-sm">
-                <h3 className="text-2xl font-bold text-cyber-cyan mb-6 font-mono neon-text">[STATUS_CONEXAO]</h3>
+                <h3 className="text-2xl font-bold text-cyber-cyan mb-6 font-mono ">[STATUS_CONEXAO]</h3>
                 <div className="flex items-center space-x-3 mb-6">
                   <span className="w-3 h-3 bg-cyber-green rounded-full animate-pulse shadow-lg shadow-cyber-green/50"></span>
                   <span className="text-white font-mono">ONLINE - Pronto para Conectar</span>

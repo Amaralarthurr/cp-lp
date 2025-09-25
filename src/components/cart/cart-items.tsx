@@ -30,7 +30,7 @@ export default function CartItems({ items, onUpdateQuantity, onRemoveItem }: Car
 
   return (
     <div className="bg-cyber-gray/80 border border-cyber-green/50 rounded-lg p-6 hologram-effect backdrop-blur-sm">
-      <h2 className="text-xl font-bold text-cyber-green mb-4 font-mono neon-text">[ITENS_SELECIONADOS]</h2>
+      <h2 className="text-xl font-bold text-cyber-green mb-4 font-mono ">[ITENS_SELECIONADOS]</h2>
       <div className="space-y-4">
         {items.map((item) => (
           <div

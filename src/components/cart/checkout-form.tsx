@@ -118,7 +118,7 @@ export default function CheckoutForm({ onSubmit, isProcessing }: CheckoutFormPro
       <div className="bg-cyber-gray/80 border border-cyber-green/50 rounded-lg p-6 hologram-effect backdrop-blur-sm">
         <div className="flex items-center space-x-2 mb-4">
           <Shield className="w-5 h-5 text-cyber-green" />
-          <h3 className="text-xl font-bold text-cyber-green font-mono neon-text">[INFORMAÇÕES_CONTATO]</h3>
+          <h3 className="text-xl font-bold text-cyber-green font-mono ">[INFORMAÇÕES_CONTATO]</h3>
         </div>
         <div className="space-y-4">
           <div>
@@ -150,7 +150,7 @@ export default function CheckoutForm({ onSubmit, isProcessing }: CheckoutFormPro
       <div className="bg-cyber-gray/80 border border-cyber-purple/50 rounded-lg p-6 hologram-effect backdrop-blur-sm">
         <div className="flex items-center space-x-2 mb-4">
           <CreditCard className="w-5 h-5 text-cyber-purple" />
-          <h3 className="text-xl font-bold text-cyber-purple font-mono neon-text">[MÉTODO_PAGAMENTO]</h3>
+          <h3 className="text-xl font-bold text-cyber-purple font-mono ">[MÉTODO_PAGAMENTO]</h3>
         </div>
 
         <div className="grid grid-cols-2 gap-4 mb-6">
@@ -159,7 +159,7 @@ export default function CheckoutForm({ onSubmit, isProcessing }: CheckoutFormPro
             onClick={() => handlePaymentMethodChange("card")}
             className={`p-4 rounded-lg border-2 transition-all duration-300 font-mono ${
               formData.paymentMethod === "card"
-                ? "border-cyber-purple bg-cyber-purple/20 text-cyber-purple neon-text"
+                ? "border-cyber-purple bg-cyber-purple/20 text-cyber-purple "
                 : "border-cyber-gray text-gray-400 hover:border-cyber-purple/50"
             }`}
           >
@@ -172,7 +172,7 @@ export default function CheckoutForm({ onSubmit, isProcessing }: CheckoutFormPro
             onClick={() => handlePaymentMethodChange("pix")}
             className={`p-4 rounded-lg border-2 transition-all duration-300 font-mono ${
               formData.paymentMethod === "pix"
-                ? "border-cyber-green bg-cyber-green/20 text-cyber-green neon-text"
+                ? "border-cyber-green bg-cyber-green/20 text-cyber-green "
                 : "border-cyber-gray text-gray-400 hover:border-cyber-green/50"
             }`}
           >
@@ -277,7 +277,7 @@ export default function CheckoutForm({ onSubmit, isProcessing }: CheckoutFormPro
         <div className="bg-cyber-gray/80 border border-cyber-cyan/50 rounded-lg p-6 hologram-effect backdrop-blur-sm">
           <div className="flex items-center space-x-2 mb-4">
             <Lock className="w-5 h-5 text-cyber-cyan" />
-            <h3 className="text-xl font-bold text-cyber-cyan font-mono neon-text">[ENDEREÇO_COBRANÇA]</h3>
+            <h3 className="text-xl font-bold text-cyber-cyan font-mono ">[ENDEREÇO_COBRANÇA]</h3>
           </div>
           <div className="space-y-4">
             <div>
@@ -339,7 +339,7 @@ export default function CheckoutForm({ onSubmit, isProcessing }: CheckoutFormPro
       <button
         type="submit"
         disabled={isProcessing}
-        className="w-full bg-gradient-to-r from-cyber-green to-cyber-cyan hover:from-cyber-pink hover:to-cyber-purple font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyber-green/50 neon-text font-mono disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+        className="w-full bg-gradient-to-r from-cyber-green to-cyber-cyan hover:from-cyber-pink hover:to-cyber-purple font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyber-green/50  font-mono disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
       >
         {isProcessing
           ? formData.paymentMethod === "pix"

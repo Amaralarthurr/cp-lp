@@ -163,14 +163,14 @@ export default function CartPage() {
           <div className="w-24 h-24 bg-cyber-green/20 border-2 border-cyber-green rounded-full flex items-center justify-center mx-auto mb-6">
             <Check className="w-12 h-12 text-cyber-green" />
           </div>
-          <h1 className="text-4xl font-cyber font-black text-cyber-green neon-text mb-4">COMPRA REALIZADA!</h1>
+          <h1 className="text-4xl font-cyber font-black text-cyber-green  mb-4">COMPRA REALIZADA!</h1>
           <p className="text-gray-300 font-mono text-lg mb-8 max-w-md">
             Obrigado por manter a criatividade humana viva. Suas experiências estão sendo preparadas.
           </p>
           <div className="space-y-4">
             <Link
               href="/experience/1"
-              className="block bg-gradient-to-r from-cyber-green to-cyber-cyan hover:from-cyber-pink hover:to-cyber-purple font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 neon-text font-mono"
+              className="block bg-gradient-to-r from-cyber-green to-cyber-cyan hover:from-cyber-pink hover:to-cyber-purple font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105  font-mono"
             >
               {">>> ACESSAR_MINHAS_EXPERIÊNCIAS"}
             </Link>
@@ -196,7 +196,7 @@ export default function CartPage() {
           {step === "cart" && (
             <>
               <div className="mb-8">
-                <h1 className="text-4xl md:text-6xl font-cyber font-black text-cyber-green neon-text mb-4">
+                <h1 className="text-4xl md:text-6xl font-cyber font-black text-cyber-green  mb-4">
                   CARRINHO DE EXPERIÊNCIAS
                 </h1>
                 <p className="text-gray-300 text-lg font-mono">
@@ -223,7 +223,7 @@ export default function CartPage() {
           {step === "checkout" && (
             <div className="max-w-4xl mx-auto">
               <div className="mb-8">
-                <h1 className="text-4xl md:text-6xl font-cyber font-black text-cyber-green neon-text mb-4">
+                <h1 className="text-4xl md:text-6xl font-cyber font-black text-cyber-green  mb-4">
                   FINALIZAR COMPRA
                 </h1>
                 <p className="text-gray-300 text-lg font-mono">
@@ -239,7 +239,7 @@ export default function CartPage() {
 
                 <div className="space-y-6">
                   <div className="bg-cyber-gray/80 border border-cyber-green/50 rounded-lg p-6 hologram-effect backdrop-blur-sm">
-                    <h3 className="text-xl font-bold text-cyber-green mb-4 font-mono neon-text">[RESUMO_FINAL]</h3>
+                    <h3 className="text-xl font-bold text-cyber-green mb-4 font-mono ">[RESUMO_FINAL]</h3>
                     <div className="space-y-3 mb-6">
                       {cartItems.map((item) => (
                         <div key={item.id} className="flex justify-between font-mono text-sm">

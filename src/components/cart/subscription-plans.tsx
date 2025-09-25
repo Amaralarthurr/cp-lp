@@ -20,7 +20,7 @@ interface SubscriptionPlansProps {
 export default function SubscriptionPlans({ plans, selectedPlan, onSelectPlan }: SubscriptionPlansProps) {
   return (
     <div className="bg-cyber-gray/80 border border-cyber-purple/50 rounded-lg p-6 hologram-effect backdrop-blur-sm">
-      <h2 className="text-xl font-bold text-cyber-purple mb-4 font-mono neon-text">[PLANOS_DE_ASSINATURA]</h2>
+      <h2 className="text-xl font-bold text-cyber-purple mb-4 font-mono ">[PLANOS_DE_ASSINATURA]</h2>
       <div className="grid md:grid-cols-3 gap-4">
         {plans.map((plan) => (
           <div

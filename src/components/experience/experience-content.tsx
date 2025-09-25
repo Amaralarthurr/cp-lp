@@ -52,7 +52,7 @@ export default function ExperienceContent({ title, image, duration, humanElement
 
       {/* Human Element */}
       <div className="bg-cyber-gray/80 border border-cyber-pink/50 rounded-lg p-6 hologram-effect backdrop-blur-sm">
-        <h3 className="text-2xl font-bold text-cyber-pink mb-4 font-mono neon-text">[TRAÇO_HUMANO]</h3>
+        <h3 className="text-2xl font-bold text-cyber-pink mb-4 font-mono ">[TRAÇO_HUMANO]</h3>
         <p className="text-gray-300 leading-relaxed font-mono">
           <span className="text-cyber-pink">{">"}</span> {humanElement}
         </p>

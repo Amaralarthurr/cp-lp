@@ -22,7 +22,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-2">
-            <span className="text-2xl font-cyber font-black text-cyber-green neon-text">Human.exe</span>
+            <span className="text-2xl font-cyber font-black text-cyber-green ">Human.exe</span>
           </div>
           <div className="hidden md:flex space-x-8">
             {[
@@ -34,7 +34,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
                 <Link
                   href={item.href}
                   onClick={(e) => handleNavClick(item.href, e)}
-                  className={`nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group neon-text cursor-pointer pointer-events-auto ${
+                  className={`nav-link text-white hover:text-cyber-green transition-colors duration-300 relative group  cursor-pointer pointer-events-auto ${
                     activeSection === item.href.replace("/", "") ? "text-cyber-green" : ""
                   }`}
                 >

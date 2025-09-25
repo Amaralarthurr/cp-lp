@@ -444,7 +444,7 @@ export default function QuizSystem({ onAnswered }: QuizSystemProps) {
     <div className="grid lg:grid-cols-3 gap-8">
       {/* Estatisticas Quiz*/}
       <div className="bg-cyber-gray/80 border border-cyber-green/50 rounded-lg p-6 hologram-effect backdrop-blur-sm">
-        <h3 className="text-xl font-bold text-cyber-green mb-4 font-mono neon-text">[STATUS_QUIZ]</h3>
+        <h3 className="text-xl font-bold text-cyber-green mb-4 font-mono ">[STATUS_QUIZ]</h3>
 
         {/* Barra de progresso*/}
         <div className="mb-4">
@@ -532,7 +532,7 @@ export default function QuizSystem({ onAnswered }: QuizSystemProps) {
               </div>
               <button
                 onClick={startQuiz}
-                className="bg-gradient-to-r from-cyber-pink to-cyber-purple hover:from-cyber-green hover:to-cyber-cyan font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyber-pink/50 neon-text font-mono"
+                className="bg-gradient-to-r from-cyber-pink to-cyber-purple font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyber-pink/50 font-mono"
               >
                 {">>> INICIAR QUIZ"}
               </button>
@@ -593,7 +593,7 @@ export default function QuizSystem({ onAnswered }: QuizSystemProps) {
               </div>
               <button
                 onClick={nextQuestion}
-                className="bg-gradient-to-r from-cyber-cyan to-cyber-green hover:from-cyber-pink hover:to-cyber-purple font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 neon-text font-mono"
+                className="bg-gradient-to-r from-cyber-cyan to-cyber-green hover:from-cyber-pink hover:to-cyber-purple font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105  font-mono"
               >
                 {">>> PRÓXIMA PERGUNTA"}
               </button>
@@ -633,13 +633,13 @@ export default function QuizSystem({ onAnswered }: QuizSystemProps) {
               <div className="space-y-3">
                 <button
                   onClick={restartQuiz}
-                  className="w-full bg-gradient-to-r from-cyber-green to-cyber-cyan hover:from-cyber-pink hover:to-cyber-purple font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 neon-text font-mono"
+                  className="w-full bg-gradient-to-r from-cyber-green to-cyber-cyan hover:from-cyber-pink hover:to-cyber-purple font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105  font-mono"
                 >
                   {">>> REFAZER QUIZ"}
                 </button>
                 <button
                   onClick={shareQuizScore}
-                  className="w-full bg-gradient-to-r from-cyber-purple to-cyber-pink hover:from-cyber-cyan hover:to-cyber-green font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 neon-text font-mono"
+                  className="w-full bg-gradient-to-r from-cyber-purple to-cyber-pink hover:from-cyber-cyan hover:to-cyber-green font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105  font-mono"
                 >
                   {">>> COMPARTILHAR RESULTADO"}
                 </button>
@@ -651,7 +651,7 @@ export default function QuizSystem({ onAnswered }: QuizSystemProps) {
 
       {/* Ranking */}
       <div className="bg-cyber-gray/80 border border-cyber-purple/50 rounded-lg p-6 hologram-effect backdrop-blur-sm">
-        <h3 className="text-xl font-bold text-cyber-purple mb-4 font-mono neon-text">[RANKING_QUIZ]</h3>
+        <h3 className="text-xl font-bold text-cyber-purple mb-4 font-mono ">[RANKING_QUIZ]</h3>
 
         <div className="space-y-3">
           <div className="flex justify-between items-center p-2 bg-cyber-dark/50 rounded border border-yellow-500/30">

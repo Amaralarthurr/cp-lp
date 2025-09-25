@@ -84,7 +84,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gradient-to-r from-cyber-cyan to-cyber-green hover:from-cyber-pink hover:to-cyber-purple text-white font-bold py-3 px-6 rounded transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyber-cyan/50 neon-text font-mono disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-gradient-to-r from-cyber-cyan to-cyber-green text-white font-bold py-3 px-6 rounded transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyber-cyan/50  font-mono disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <span className="text-white">
             {submitStatus === "idle" && ">>> TRANSMITIR_MENSAGEM"}

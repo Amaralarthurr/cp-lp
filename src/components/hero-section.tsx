@@ -13,11 +13,7 @@ export default function HeroSection() {
       <div className="text-center relative z-10">
         <div className="mb-4 text-cyber-green font-mono text-sm terminal-cursor">{"> Inicializando Human.exe..."}</div>
         <h1 className="text-6xl md:text-8xl lg:text-9xl font-cyber font-black mb-8 relative">
-          <span
-            className="glitch text-white neon-text"
-            data-text="HUMAN.EXE"
-            style={{ textShadow: "0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41" }}
-          >
+          <span className="glitch text-white" data-text="HUMAN.EXE">
             HUMAN.EXE
           </span>
         </h1>
@@ -27,7 +23,7 @@ export default function HeroSection() {
 
         <button
           onClick={() => scrollToSection("why-humans")}
-          className="relative bg-gradient-to-r from-cyber-green to-cyber-cyan hover:from-cyber-pink hover:to-cyber-purple font-bold py-4 px-8 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyber-green/50 border border-cyber-green hover:border-cyber-pink neon-text"
+          className="relative bg-gradient-to-r from-cyber-green to-cyber-cyan font-bold py-4 px-8 rounded-lg transition-all duration-500 transform hover:scale-105 border border-cyber-green hover:border-cyber-cyan text-white"
         >
           <span className="relative z-10">{">>> INICIALIZAR_PROTOCOLO"}</span>
         </button>
